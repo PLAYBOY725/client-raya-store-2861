@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raya Store | Elegant Women's Fashion | Indiranagar, Bengaluru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #fdf2f8 0%, #fef3c7 100%); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { raya: { 500: '#db2777', 600: '#be185d' } } } } }
+    </script>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2 text-sm text-center px-4">
+        <p>Rated 4.9★ on Google by 120+ Happy Customers | Visit us in Indiranagar, Bengaluru</p>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-raya-600 tracking-tight">RAYA STORE</div>
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#services" class="hover:text-raya-600 transition">Services</a>
+                <a href="#faq" class="hover:text-raya-600 transition">FAQ</a>
+                <a href="tel:+919901567576" class="text-gray-600">+91 99015 67576</a>
+            </div>
+            <a href="#booking" class="bg-gray-900 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-raya-600 transition">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="gradient-bg py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full shadow-sm text-sm font-semibold text-raya-600">
+                    <span>★ 4.9 Rating</span> • <span>120+ Verified Reviews</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">Elevating Boutique Fashion Operations.</h1>
+                <p class="text-xl text-gray-600 max-w-lg">Transform your Indiranagar boutique with seamless digital integration. From inventory management to automated sales, we handle the backend so you can focus on style.</p>
+                <div class="flex gap-4">
+                    <a href="#booking" class="bg-raya-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-raya-700 shadow-lg">Get Strategy</a>
+                    <a href="https://wa.me/919901567576?text=Hello%20Raya%20Store,%20I%20want%20to%20inquire%20about%20your%20services." class="bg-white px-8 py-4 rounded-xl font-bold border border-gray-200 hover:border-raya-600 transition">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 bg-white p-8 rounded-3xl shadow-2xl border border-pink-100">
+                <h3 class="text-xl font-bold mb-4">Operations Dashboard</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                        <p class="text-sm text-gray-500">Live Inventory</p>
+                        <p class="text-2xl font-bold text-raya-600">98% Synced</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                        <p class="text-sm text-gray-500">Customer Response</p>
+                        <p class="text-2xl font-bold text-raya-600">Avg < 5min</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">Bespoke Boutique Solutions</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[ {t: 'Strategy', d: 'Signature consultation for brand growth.'}, {t: 'Turnaround', d: 'Implementation of e-commerce systems.'}, {t: 'Enterprise', d: 'End-to-end digital business management.'}, {t: 'VIP Support', d: '24/7 dedicated operational assistance.'} ].map(s => (
+                <div class="p-8 rounded-3xl border border-gray-100 bg-white hover:shadow-xl transition shadow-sm group">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg mb-6 group-hover:bg-raya-600 transition"></div>
+                    <h3 class="text-xl font-bold mb-2">{s.t}</h3>
+                    <p class="text-gray-600">{s.d}</p>
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-20 bg-gray-50 px-6">
+        <div class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-lg border border-gray-100">
+            <h2 class="text-3xl font-bold mb-2">Book Your Strategy Session</h2>
+            <p class="text-gray-600 mb-8">Ready to modernize your boutique? Let's talk.</p>
+            <div id="formFeedback" class="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-lg font-medium">Thank you! Your request has been sent to our team.</div>
+            <form id="contactForm" class="space-y-4">
+                <input type="text" placeholder="Your Name" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-raya-600">
+                <input type="email" placeholder="Email Address" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-raya-600">
+                <textarea placeholder="Tell us about your boutique goals" required class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-raya-600 h-32"></textarea>
+                <button type="submit" class="w-full bg-raya-600 text-white py-4 rounded-xl font-bold hover:bg-raya-700 transition">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 container mx-auto px-6 max-w-3xl">
+        <h2 class="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="border border-gray-200 rounded-2xl p-6">
+                <button onclick="toggleFaq(this)" class="flex justify-between w-full font-bold text-lg">Can you help with Instagram sales? <span>+</span></button>
+                <div class="hidden pt-4 text-gray-600">Yes, we specialize in integrating your Instagram store with a high-performance e-commerce backend.</div>
+            </div>
+            <div class="border border-gray-200 rounded-2xl p-6">
+                <button onclick="toggleFaq(this)" class="flex justify-between w-full font-bold text-lg">Where are you located? <span>+</span></button>
+                <div class="hidden pt-4 text-gray-600">We are centrally located in Indiranagar, Bengaluru.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 text-center px-6">
+        <p class="font-bold text-xl mb-4">RAYA STORE</p>
+        <p class="text-gray-400 mb-2">Indiranagar, Bengaluru, KA</p>
+        <p class="text-sm text-gray-600">© 2023 Raya Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('formFeedback').classList.remove('hidden');
+            document.getElementById('contactForm').reset();
+        });
+
+        // Accordion
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            content.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
